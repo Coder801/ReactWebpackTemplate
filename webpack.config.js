@@ -28,10 +28,18 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlPlugin({
       filename: 'index.html',
       template: './src/index.html',
       inject: true
     })
-  ]
+  ],
+  devServer: {
+    contentBase: PATHS.build,
+    compress: true,
+    port: 9000,
+    hot: true,
+    inline: true
+  }
 };
