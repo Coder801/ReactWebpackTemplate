@@ -7,6 +7,7 @@ const PATHS = {
   build: join(__dirname, 'build')
 }
 
+
 module.exports = {
   entry: {
     app: PATHS.app
